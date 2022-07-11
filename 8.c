@@ -4,7 +4,7 @@
 #include<stdio.h>
 
 int main() {
-    int a[3][3], b[3][3], c[3][3];
+    int a[3][3], b[3][3], c[3];
     int i, j, k, sum;
     int row=3, column=3;
 
@@ -13,7 +13,7 @@ int main() {
     for (i=0; i < row; i++) {
         printf("For number %d row: \n", i+1);
         for (j=0; j < column; j++) {
-            printf("Enter for number %d column: ", j+1);
+            printf("For number %d column: ", j+1);
             scanf("%d", &a[i][j]);
         }
     }
@@ -22,7 +22,7 @@ int main() {
     for (i=0; i < row; i++) {
         printf("For number %d row: \n", i+1);
         for (j=0; j < column; j++) {
-            printf("Enter for number %d column: ", j+1);
+            printf("For number %d column: ", j+1);
             scanf("%d", &b[i][j]);
         }
     }
@@ -34,17 +34,14 @@ int main() {
             for (k=0; k < column; k++) {
                 sum += a[i][k] * b[k][i];
             }
-            c[i][j] = sum;
+            c[i] = sum;
         }
     }
 
     // Output
     printf("Results: \n");
     for (i=0; i < row; i++) {
-        for (j=0; j < column; j++) {
-            printf("%d ",c[i][j]);
-        }
-        printf("\n");
+        printf("%d \n",c[i]);
     }
 
     return 0;
