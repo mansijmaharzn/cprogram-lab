@@ -17,7 +17,7 @@ int main() {
         }
         // printf("%d", j);
         for (k=j; k>=1; k--) {
-            if (i%2 == 0)
+            if (i%2 == 0) // even row ma # cha, odd ma *
                 printf("# ");
             else
                 printf("* ");
