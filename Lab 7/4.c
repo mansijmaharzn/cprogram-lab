@@ -1,32 +1,51 @@
-// Ayena ;-;
+/*
+WAF which receives 5 integers and written the sum, average and standard deviation
+of these numbers. Call this function from main function and print the result in
+main function.
+*/
+
+// AYENA ;-;
 #include<stdio.h>
 #include<math.h>
 
-int calculate(int *a, int *b, int *c, int *d, int *e, float *total, float *average, float *sd);
+int calculate(int num[], double *total, double *average, double *sd);
 
 int main() {
-    int a, b, c, d, e;
-    float *total, *average, sd=0.0;
+    int num[5], i;
+    double *total, *average, *sd=0.0;
 
-    printf("Enter 5 numbers: ");
-    scanf("%d %d %d %d %d ", &a, &b, &c, &d, &e);
+    for (i=0; i<5; i++) {
+        printf("Enter number %d: ", i+1);
+        scanf("%d ", &num[i]);
+    }
 
-    calculate(&a, &b, &c, &d, &e, &total, &average, &sd);
+    calculate(num, total, average, sd);
+
+    printf("Total: %f", *total);
+    printf("Average: %f", *average);
 
     return 0;
 }
 
-int calculate(int *a, int *b, int *c, int *d, int *e, float *total, float *average, float *sd) {
-    *total = *a+*b+*c+*d+*e;
+int calculate(int num[], double *total, double *average, double *sd) {
+    int i;
+    
+    for (i=0; i<5; i++) {
+        *total += num[i];
+    }
+
     *average = *total/5;
 
     // standard deviation
     float sum=0.0, mean;
-    int i;
     sum = *total;
     mean = sum / 10;
-    for (i = 0; i < 10; ++i) {
-        sd += pow(data[i] - mean, 2);
+
+    sum = 0.0;
+    for (i = 0; i < 5; i++) {
+        sum += (num[i] - mean) * (num[i] - mean);
     }
-    *sd = sqrt(sd / 10);
+    *sd = sqrt(sum / 5);
+
+    return 0;
 }

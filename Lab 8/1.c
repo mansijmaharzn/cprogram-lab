@@ -1,3 +1,4 @@
+// WAP to convert lower case character array to upper case and display.
 #include<stdio.h>
 
 int main() {

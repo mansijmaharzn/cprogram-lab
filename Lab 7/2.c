@@ -1,3 +1,4 @@
+// WAP a function that adds two numbers.
 #include<stdio.h>
 
 int addNumbers(int num1, int num2);

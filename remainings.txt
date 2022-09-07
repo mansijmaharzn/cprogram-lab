@@ -1,0 +1,3 @@
+This file is for anybody whobody wants to complete the remaining programs!
+Lab 7/4.c (audai ayena)
+Lab 8/4.c (IDK what that "use static" means)

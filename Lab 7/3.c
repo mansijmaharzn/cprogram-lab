@@ -1,3 +1,7 @@
+/* Calculate the factorial of an integer entered through the keyboard.
+Make main function to input the integer and call a function that calculates the
+factorial of the integer.
+*/
 #include<stdio.h>
 
 int factorial(int num);

@@ -1,3 +1,11 @@
+/*
+WAP to display following menu:
+i. I∑
+ii. sum of squares
+iii. sum of cubes
+iv. product
+and perform operations as per user's choice.
+*/
 #include<stdio.h>
 
 int main() {
