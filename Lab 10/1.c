@@ -36,17 +36,22 @@ int main() {
         }
     }
 
+    // descending
     printf("The roll no. according to marks in descending order:\n");
     for (i = 0; i < stdNo; i++) {
         printf("RollNo: %d, ", a1[i].rollNo);
         printf("Marks: %f\n", a1[i].marks);
     }
 
+    // average marks
     for (i=0; i<stdNo; i++) {
         totalMarks += a1[i].marks;
     }
     avgMarks = totalMarks/stdNo;
     printf("Average marks: %f", avgMarks);
+
+    // marks fall under the average
+    
 
     return 0;
 }
