@@ -1,0 +1,36 @@
+/*
+Define a structure array for 20 people having the members to store
+name, year of birth and month of birth. Find the name of people having birthday
+in particular month.
+*/
+#include<stdio.h>
+
+struct person {
+    char name[30], birthMonth[30];
+    int birthYear;
+};
+
+int main() {
+    int i, j, perNo = 4;
+    struct person p1[perNo];
+
+    for (i=0; i<perNo; i++) {
+        printf("For person %d\n", i+1);
+        printf("Enter name: ");
+        scanf("%s", p1[i].name);
+        printf("Enter birth-year: ");
+        scanf("%d", &p1[i].birthYear);
+        printf("Enter birth-month: ");
+        scanf("%s", p1[i].birthMonth);
+    }
+
+    // Milexaina
+    for (i=0; i<perNo; i++) {
+        for (j=0; j<perNo; j++) {
+            if (p1[i].birthMonth == p1[j].birthMonth)
+                printf("%s and %s have same birthday month!\n", p1[i].name, p1[j].name);
+        }
+    }
+
+    return 0;
+}

@@ -14,7 +14,7 @@ struct student {
 };
 
 int main() {
-    int stdNo = 2, i, j;
+    int stdNo = 20, i, j;
     struct student a1[stdNo], b1; // b1 as temporary storage
     float totalMarks, avgMarks;
 
@@ -36,7 +36,6 @@ int main() {
         }
     }
 
-    // descending
     printf("The roll no. according to marks in descending order:\n");
     for (i = 0; i < stdNo; i++) {
         printf("RollNo: %d, ", a1[i].rollNo);
@@ -48,10 +47,18 @@ int main() {
         totalMarks += a1[i].marks;
     }
     avgMarks = totalMarks/stdNo;
-    printf("Average marks: %f", avgMarks);
+    printf("Average marks: %f\n", avgMarks);
 
     // marks fall under the average
-    
+    // under the avg means avg marks bhanda talla sabai? ki avg marks wala only?
+    // doing this assuming that under avg marks means 0 - avgMarks
+    printf("Roll numbers whose marks fall under the average:\n");
+    for (i = 0; i < stdNo; i++) {
+        if (a1[i].marks < avgMarks) {
+            printf("RollNo: %d, ", a1[i].rollNo);
+            printf("Marks: %f\n", a1[i].marks);
+        }
+    }
 
     return 0;
 }
