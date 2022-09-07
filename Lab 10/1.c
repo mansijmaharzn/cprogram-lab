@@ -15,8 +15,8 @@ struct student {
 
 int main() {
     int stdNo = 2, i, j;
-    float temp;
-    struct student a1[stdNo], b1[stdNo];
+    struct student a1[stdNo], b1; // b1 as temporary storage
+    float totalMarks, avgMarks;
 
     for (i=0; i<stdNo; i++) {
         printf("Student %d (rollNo): ", i+1);
@@ -26,20 +26,27 @@ int main() {
     }
 
     // descending
-    for (i=0; i<stdNo; i++) {     
-        for (j=i+1; j<stdNo; j++) {     
+    for (i = 0; i < stdNo; i++) {     
+        for (j = i + 1; j < stdNo; j++) {     
             if (a1[i].marks < a1[j].marks) {
-                b1[i].rollNo = a1[i].rollNo;
-                b1[i].marks = a1[i].marks;
-            }
+                b1 = a1[i];
+                a1[i] = a1[j];
+                a1[j] = b1;
+            }    
         }
     }
 
     printf("The roll no. according to marks in descending order:\n");
     for (i = 0; i < stdNo; i++) {
-        printf("%d ", b1.rollNo[i]);
-        printf("%f\n", b1.marks[i]);
+        printf("RollNo: %d, ", a1[i].rollNo);
+        printf("Marks: %f\n", a1[i].marks);
     }
+
+    for (i=0; i<stdNo; i++) {
+        totalMarks += a1[i].marks;
+    }
+    avgMarks = totalMarks/stdNo;
+    printf("Average marks: %f", avgMarks);
 
     return 0;
 }
