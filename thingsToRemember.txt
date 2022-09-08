@@ -1,0 +1,11 @@
+natural numbers: counting numbers (starting from 1)
+transpose: transpose[j][i] = a[i][j]
+structure: semi-colon at end while creating its layout
+primeNumbers: 0 and 1 are non-prime numbers
+                if (n % i == 0):
+                if (i % j == 0):
+                    not primeNumbers, flag = 1
+                flag = 0 for primeNumbers (i%j != 0)
+
+
+Review: Pointers, File Handling
