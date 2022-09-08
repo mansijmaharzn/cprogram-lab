@@ -1,3 +1,26 @@
+File Handling CheatSheet!
+
+EOF: End of File
+
+Opening a File:
+FILE *file;
+file = fopen("filename", "mode");
+
+Closing a File:
+fclose(file);
+
+Reading from a File:
+char ch;
+fscanf(file, "%c", &ch);
+    Special: fgetc(file);
+
+Writing to a File:
+char ch = "A";
+fprintf(file, "%c", ch);
+    Special: fputc("A", file);
+
+
+// EXAMPLE
 // WAP that reads data from file "input.txt" and writes to "output.txt"
 #include<stdio.h>
 
@@ -15,7 +38,6 @@ int main() {
     }
 
     printf("Done!");
-    fclose(file);
     fclose(file);
 
     return 0;
