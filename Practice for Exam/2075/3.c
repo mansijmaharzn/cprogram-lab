@@ -16,7 +16,7 @@ int main() {
 
     printf("Done!");
     fclose(file);
-    fclose(file);
+    fclose(des_file);
 
     return 0;
 }

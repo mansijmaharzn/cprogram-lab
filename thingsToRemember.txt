@@ -8,4 +8,4 @@ primeNumbers: 0 and 1 are non-prime numbers
                 flag = 0 for primeNumbers (i%j != 0)
 
 Taking input: address operator needed for %c, not needed for %s
-Review: Pointers, File Handling
+Review: Pointers, File Handling, Dynamic Memory Allocation
