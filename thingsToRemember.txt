@@ -8,4 +8,20 @@ primeNumbers: 0 and 1 are non-prime numbers
                 flag = 0 for primeNumbers (i%j != 0)
 
 Taking input: address operator needed for %c, not needed for %s
-Review: Pointers, File Handling, Dynamic Memory Allocation
+Review: Pointers, File Handling, Dynamic Memory Allocation, Graphic's code from collegenote.net
+
+Sum of digits of a number:
+    t = num;
+    while (t != 0) {
+        remainder = t % 10;
+        sum += remainder;
+        t = t / 10;
+    } // print(sum);
+
+Check Palindrome:
+    original = n;
+    while (n != 0) {
+        remainder = num % 10;
+        reversed = reversed * 10 + remainder;
+        num /= 10; // (num = num / 10)
+    } // original == reverse: is Palindrome
