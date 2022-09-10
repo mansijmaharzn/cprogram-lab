@@ -10,6 +10,8 @@ int main() {
 
     fputs(ch, file);
 
+    fclose(file);
+    
     printf("Contains: %s", ch);
 
     return 0;
