@@ -17,7 +17,7 @@ int main() {
         ptr++;
     }
 
-    ptr = &a[size-1];
+    ptr = &a[size-1]; // index starts with 0 so the total index is size of array - 1
 
     printf("Elements in reverse order:\n");
     for (i=0; i<size; i++) {
