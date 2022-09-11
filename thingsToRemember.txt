@@ -1,12 +1,12 @@
 natural numbers: counting numbers (starting from 1)
 transpose: transpose[j][i] = a[i][j]
 structure: semi-colon at end while creating its layout
-primeNumbers: 0 and 1 are non-prime numbers
+primeNumbers: 0 and 1 are non-prime numbers and 2 is prime number
                 if (n % i == 0):
                         OR
                 if (i % j == 0):
-                    not primeNumbers, flag = 1
-                flag = 0 for primeNumbers (i%j != 0)
+                    not primeNumbers, flag++
+                if flag == 2: primeNumber
 
 Taking input: address operator needed for %c, not needed for %s
 Review: Pointers, File Handling, Dynamic Memory Allocation, Graphic's code from collegenote.net
