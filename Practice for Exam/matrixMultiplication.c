@@ -4,7 +4,7 @@
 #include<stdio.h>
 
 int main() {
-    int a[3][3], b[3][3], c[3];
+    int a[3][3], b[3][3], c[3][3];
     int i, j, k, sum;
     int row=3, column=3;
 
