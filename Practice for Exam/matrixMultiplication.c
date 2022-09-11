@@ -42,8 +42,9 @@ int main() {
     printf("Results: \n");
     for (i=0; i < row; i++) {
         for (j=0; j<column; j++) {
-            printf("%d \n",c[i][j]);
+            printf("%d ",c[i][j]);
         }
+        printf("\n");
     }
 
     return 0;
