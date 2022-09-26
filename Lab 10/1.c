@@ -51,7 +51,7 @@ int main() {
 
     // marks fall under the average
     // under the avg means avg marks bhanda talla sabai? ki avg marks wala only?
-    // doing this assuming that under avg marks means 0 - avgMarks
+    // doing this assuming that under avg marks means 0 to avgMarks
     printf("Roll numbers whose marks fall under the average:\n");
     for (i = 0; i < stdNo; i++) {
         if (a1[i].marks < avgMarks) {
