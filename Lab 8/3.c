@@ -9,18 +9,16 @@ int main() {
     // Inputs
     printf("For FIRST Matrix:\n");
     for (i=0; i < row; i++) {
-        printf("For number %d row: \n", i+1);
         for (j=0; j < column; j++) {
-            printf("For number %d column: ", j+1);
+            printf("a[%d][%d]", i+1, j+1);
             scanf("%d", &a[i][j]);
         }
     }
 
     printf("For SECOND Matrix:\n");
     for (i=0; i < row; i++) {
-        printf("For number %d row: \n", i+1);
         for (j=0; j < column; j++) {
-            printf("For number %d column: ", j+1);
+            printf("b[%d][%d]", i+1, j+1);
             scanf("%d", &b[i][j]);
         }
     }
