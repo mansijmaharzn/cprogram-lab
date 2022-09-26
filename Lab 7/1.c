@@ -16,7 +16,7 @@ int main() {
     scanf("%d", &choice);
 
     printf("Enter two numbers: ");
-        scanf("%d %d", &num1, &num2);
+    scanf("%d %d", &num1, &num2);
 
     switch (choice) {
         case 1:
