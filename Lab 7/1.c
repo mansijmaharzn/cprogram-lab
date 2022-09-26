@@ -33,6 +33,9 @@ int main() {
         case 4:
             printf("Product: %d", num1*num2);
             break; 
+        default:
+            printf("Invalid Input");
+            break;
     }
 
     return 0;
