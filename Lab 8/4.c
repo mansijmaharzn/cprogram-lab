@@ -1,38 +1,35 @@
 /*
 WAP that will sort a list of names in alphabetical order,
-using string handeling functions and use static to give
+using string handling functions and use static to give
 a list of names.
 */
 
 #include<stdio.h>
 #include<string.h>
 int main(){
-    int i,j,n;
-    // namelimit,charlimit
-    char names[50][20],s[100];
-    printf("Enter number of names: ");
-    scanf("%d",&n);
-
-    for(i=0; i<n; i++) {
-        printf("%d. Enter name: ", i+1);
-        scanf("%s",names[i]);
+    static char name[10][20];
+    char temp[20];
+    int i, j, n;
+    printf("Enter the number of names [MAX: 10]: ");
+    scanf("%d", &n);
+    printf("Enter the names [Length <=20]:\n");
+    for(i=0; i<n; i++){
+        printf("Name %d: ", i+1);
+        scanf("%s", name[i]);
     }
-
-    // strcmp(), strcpy() -> string handling functions
-    for(i=0; i<n; i++) {
-        for(j=i+1; j<n ;j++){
-            if (strcmp(names[i],names[j]) > 0) {
-                strcpy(s,names[i]);
-                strcpy(names[i],names[j]);
-                strcpy(names[j],s);
+    for(i=0; i<n; i++){
+        for(j=i+1; j<n; j++){
+            if(strcmp(name[i], name[j])>0){
+                strcpy(temp, name[i]);
+                strcpy(name[i], name[j]);
+                strcpy(name[j], temp);
             }
         }
     }
-
-    printf("The sorted order:\n");
-    for (i=0; i<n; i++) {
-        printf("%s\n",names[i]);
+    printf("The names in alphabetical order are: ");
+    for(i=0; i<n; i++){
+        printf("%s ", name[i]);
     }
-    
+
     return 0;
 }
