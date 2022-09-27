@@ -1,6 +1,5 @@
 /* WAP to open a file in read/write mode in it.
 Read and write information in the file */
-// milena ayena hya ;-;
 #include<stdio.h>
 
 int main() {
@@ -8,14 +7,23 @@ int main() {
     char ch;
 
     file = fopen("for2.txt", "r+");
-    ch = fgetc(file);
-    while (ch != EOF) {
-        fputc(ch, file);
-        ch = fgetc(file);
+    if (file == NULL) {
+        printf("File not found");
+        return 0;
     }
+    while ((ch = fgetc(file)) != EOF) {
+        printf("%c", ch);
+    }
+    printf("\nCompleted reading file");
+
+    printf("\nEnter data to write in file: ");
+    while ((ch = getchar()) != EOF) {
+        fputc(ch, file);
+    }
+    printf("Completed writing to file");
 
     fclose(file);
-    printf("Done!");
+    printf("\nDone!");
 
     return 0;
 }
