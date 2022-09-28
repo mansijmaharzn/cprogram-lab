@@ -7,7 +7,7 @@
 #include<stdio.h>
 
 int main() {
-    FILE *file, *appFile;
+    FILE *file;
     char ch, input[50],filename[20];
 
     // i. ko question kasaile buzyo? ;-;
