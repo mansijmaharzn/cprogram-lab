@@ -3,7 +3,7 @@
 
 int main() {
     int arrayOne[5], arrayTwo[5];
-    int i, sum=0;
+    int i;
     int *ptr;
 
     printf("\nEnter array elements (5 integer values):");
