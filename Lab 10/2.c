@@ -12,7 +12,7 @@ struct person {
 };
 
 int main() {
-    int i, j, perNo = 3;
+    int i, j, perNo = 20;
     char month[30];
     struct person p1[perNo];
 
@@ -29,8 +29,7 @@ int main() {
     }
     
 
-    printf("Enter the month to find the people having birthday in that month:\n");
-    printf("Enter month: ");
+    printf("Enter the month to find the people having birthday in that month: ");
     scanf("%s", month);
    
     printf("\nPeople having birthday in %s are:\n", month);
