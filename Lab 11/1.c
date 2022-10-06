@@ -6,8 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int main()
-{
+int main() {
     int n = 5;
     char names[20][20], temp[20], copy[20][20];
     FILE* fp;
