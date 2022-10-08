@@ -6,7 +6,7 @@ int main() {
     char ch;
     int count=0;
 
-    file = fopen("for4.txt", "r+");
+    file = fopen("for4.txt", "r");
     ch = fgetc(file);
     while (ch != EOF) {
         count++;
