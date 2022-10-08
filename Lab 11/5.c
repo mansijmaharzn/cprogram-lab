@@ -17,7 +17,7 @@ int main() {
     }
 
     // circle
-    circle(x, y, 100);
+    circle(50, 50, 100);
     // line
     line(0, 0, getmaxx(), getmaxy());
     // arc
