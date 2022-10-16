@@ -20,9 +20,8 @@ int main() {
     file = fopen(filename, "w+");
 
     printf("Enter data to write in file: ");
-    while ((ch = getchar()) != EOF) {
-        fputc(ch, file);
-    }
+    scanf("%s", input);
+    fputs(input, file);
     printf("Completed writing to file %s\n", filename);
    
     rewind(file);
