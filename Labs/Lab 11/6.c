@@ -60,9 +60,8 @@ int main() {
     file = fopen("existing.txt", "a");
     printf("\nWrite a message to append: ");
     clearerr(stdin);
-    while ((ch = getchar()) != EOF) {
-        fputc(ch, file);
-    }
+    scanf("%s", input);
+    fputs(input, file);
     fclose(file);
 
     printf("\n\n");
