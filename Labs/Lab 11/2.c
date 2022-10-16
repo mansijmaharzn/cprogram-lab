@@ -4,7 +4,7 @@ Read and write information in the file */
 
 int main() {
     FILE *file;
-    char ch;
+    char ch, string[20];
 
     file = fopen("for2.txt", "r+");
     if (file == NULL) {
@@ -17,9 +17,9 @@ int main() {
     printf("\nCompleted reading file");
 
     printf("\nEnter data to write in file: ");
-    while ((ch = getchar()) != EOF) {
-        fputc(ch, file);
-    }
+    scanf("%s", string);
+    fputs(string, file);
+
     printf("Completed writing to file");
 
     fclose(file);
