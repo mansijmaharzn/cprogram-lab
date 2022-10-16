@@ -6,8 +6,7 @@ i. Order the roll no. according to marks in descending order
 ii. average marks
 iii. print the roll no. whose marks fall under the average
 */
-/* NOTE: maile report ma sabai 20 jana students ko lekhyena,
-... gardeye 3 4 wota lekhyesi. Hope you'll do the same 🥹 */
+/* NOTE: maile report ma sabai 6 jana gardeye, coz ko lekhxa 20 jana */
 #include<stdio.h>
 
 struct student {
